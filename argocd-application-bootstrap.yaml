@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: bootstrap
+  namespace: openshift-gitops
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/riteshshah/coco-azure-gitops  # Update to your fork URL
+    targetRevision: main  # or your branch name
+    path: bootstrap
+    helm:
+      releaseName: bootstrap
+      valueFiles:
+        - values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default  # or whatever namespace you want
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
