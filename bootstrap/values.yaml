@@ -13,4 +13,4 @@ deployer:
 coco-bootstrap:
   repoURL: https://github.com/rhpds/coco-azure-gitops
   targetRevision: main
-  path: bootstrap
+  path: coco-operator-deployment
