@@ -1,0 +1,14 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: sandboxed-containers-operator
+  namespace: {{ .Values.operators.sandboxedContainers.namespace }}
+spec:
+  channel: {{ .Values.operators.sandboxedContainers.channel }}
+  installPlanApproval: {{ .Values.operators.sandboxedContainers.installPlanApproval }}
+  name: sandboxed-containers-operator
+  source: {{ .Values.operators.sandboxedContainers.source }}
+  sourceNamespace: {{ .Values.operators.sandboxedContainers.sourceNamespace }}
+  {{- if .Values.operators.sandboxedContainers.startingCSV }}
+  startingCSV: {{ .Values.operators.sandboxedContainers.startingCSV }}
+  {{- end }}

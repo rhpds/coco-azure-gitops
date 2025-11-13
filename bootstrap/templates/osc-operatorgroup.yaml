@@ -1,0 +1,8 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: sandboxed-containers-operator-group
+  namespace: {{ .Values.operators.sandboxedContainers.namespace }}
+spec:
+  targetNamespaces:
+    - {{ .Values.operators.sandboxedContainers.namespace }}

@@ -14,3 +14,24 @@ cocoBootstrap:
   repoURL: https://github.com/rhpds/coco-azure-gitops
   targetRevision: main
   path: coco-operator-deployment
+  namespace: default
+
+# Operator configurations
+operators:
+  sandboxedContainers:
+    namespace: openshift-sandboxed-containers-operator
+    channel: stable
+    installPlanApproval: Automatic
+    source: redhat-operators
+    sourceNamespace: openshift-marketplace
+    startingCSV: sandboxed-containers-operator.v1.7.0
+    syncWave: "-1"
+
+  trustee:
+    namespace: trustee-operator-system
+    channel: stable
+    installPlanApproval: Automatic
+    source: redhat-operators
+    sourceNamespace: openshift-marketplace
+    # startingCSV: trustee-operator.v0.1.0  # Optional
+    syncWave: "-1"

@@ -1,0 +1,14 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: trustee-operator
+  namespace: {{ .Values.operators.trustee.namespace }}
+spec:
+  channel: {{ .Values.operators.trustee.channel }}
+  installPlanApproval: {{ .Values.operators.trustee.installPlanApproval }}
+  name: trustee-operator
+  source: {{ .Values.operators.trustee.source }}
+  sourceNamespace: {{ .Values.operators.trustee.sourceNamespace }}
+  {{- if .Values.operators.trustee.startingCSV }}
+  startingCSV: {{ .Values.operators.trustee.startingCSV }}
+  {{- end }}
