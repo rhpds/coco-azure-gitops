@@ -8,6 +8,6 @@ spec:
   installPlanApproval: Automatic
   name: trustee-operator
   source: redhat-operators
-  sourceNamespace: openshift-operators
+  sourceNamespace: openshift-marketplace
   # Optional: Specify a version (CSV) if required
   # startingCSV: trustee-operator.v0.1.0
