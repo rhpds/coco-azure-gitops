@@ -10,7 +10,6 @@ spec:
     repoURL: {{ .Values.cocoBootstrap.repoURL }}
     targetRevision: {{ .Values.cocoBootstrap.targetRevision }}
     path: {{ .Values.cocoBootstrap.path }}
-    kustomize: {}
   destination:
     server: https://kubernetes.default.svc
     namespace: {{ .Values.cocoBootstrap.namespace }}
