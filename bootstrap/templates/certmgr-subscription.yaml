@@ -1,0 +1,14 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: openshift-cert-manager-operator
+  namespace: {{ .Values.operators.certManagerrs.namespace }}
+spec:
+  channel: {{ .Values.operators.certManager.channel }}
+  installPlanApproval: {{ .Values.operators.certManager.installPlanApproval }}
+  name: openshift-cert-manager-operator
+  source: {{ .Values.operators.certManager.source }}
+  sourceNamespace: {{ .Values.operators.certManager.sourceNamespace }}
+  {{- if .Values.operators.certManager.startingCSV }}
+  startingCSV: {{ .Values.operators.certManager.startingCSV }}
+  {{- end }}

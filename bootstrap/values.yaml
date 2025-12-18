@@ -35,3 +35,12 @@ operators:
     sourceNamespace: openshift-marketplace
     # startingCSV: trustee-operator.v0.1.0  # Optional
     syncWave: "-1"
+
+  certManager:
+    namespace: cert-manager
+    channel: stable
+    installPlanApproval: Automatic
+    source: redhat-operators
+    sourceNamespace: openshift-marketplace
+    # startingCSV: trustee-operator.v0.1.0  # Optional
+    syncWave: "-1"
