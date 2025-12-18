@@ -37,7 +37,7 @@ operators:
     syncWave: "-1"
 
   certManager:
-    namespace: cert-manager
+    namespace: cert-manager-operator
     channel: stable
     installPlanApproval: Automatic
     source: redhat-operators
