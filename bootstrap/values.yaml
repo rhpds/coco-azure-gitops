@@ -38,7 +38,7 @@ operators:
 
   certManager:
     namespace: cert-manager-operator
-    channel: stable
+    channel: stable-v1
     installPlanApproval: Automatic
     source: redhat-operators
     sourceNamespace: openshift-marketplace
