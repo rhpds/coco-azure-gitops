@@ -2,7 +2,7 @@ apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
   name: openshift-cert-manager-operator
-  namespace: {{ .Values.operators.certManagerrs.namespace }}
+  namespace: {{ .Values.operators.certManager.namespace }}
 spec:
   channel: {{ .Values.operators.certManager.channel }}
   installPlanApproval: {{ .Values.operators.certManager.installPlanApproval }}
